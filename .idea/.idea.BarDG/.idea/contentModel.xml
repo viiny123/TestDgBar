@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Personal\TestDgBar" t="IncludeFlat">
+      <e p="BarDg.Api" t="IncludeRecursive">
+        <e p="appsettings.Development.json" t="Include" />
+        <e p="appsettings.json" t="Include" />
+        <e p="Authorizations" t="Include">
+          <e p="AuthUser.cs" t="Include" />
+          <e p="AuthUserExtension.cs" t="Include" />
+          <e p="IAuthUser.cs" t="Include" />
+          <e p="LoginRequest.cs" t="Include" />
+        </e>
+        <e p="BarDg.Api.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Configurations" t="Include">
+          <e p="SwaggerConfig.cs" t="Include" />
+        </e>
+        <e p="Controllers" t="Include">
+          <e p="AuthController.cs" t="Include" />
+          <e p="OrderController.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="BarDg.Api.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="launchSettings.json" t="Include" />
+        </e>
+        <e p="Startup.cs" t="Include" />
+      </e>
+      <e p="BarDg.Domain" t="IncludeRecursive">
+        <e p="BarDg.Domain.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Commands" t="Include">
+          <e p="Contracts" t="Include">
+            <e p="ICommand.cs" t="Include" />
+            <e p="ICommandResult.cs" t="Include" />
+          </e>
+          <e p="CreateOrderCommand.cs" t="Include" />
+          <e p="GenericCommandResult.cs" t="Include" />
+        </e>
+        <e p="Entities" t="Include">
+          <e p="Client.cs" t="Include" />
+          <e p="Entity.cs" t="Include" />
+          <e p="Invoice.cs" t="Include" />
+          <e p="InvoiceItems.cs" t="Include" />
+          <e p="Item.cs" t="Include" />
+          <e p="ItemOrder.cs" t="Include" />
+          <e p="Order.cs" t="Include" />
+        </e>
+        <e p="Handlers" t="Include">
+          <e p="Contracts" t="Include">
+            <e p="IHandler.cs" t="Include" />
+          </e>
+          <e p="OrderHandler.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="BarDg.Domain.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Queries" t="Include">
+          <e p="OrderQueries.cs" t="Include" />
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="IOrderRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="BarDg.Domain.Infra" t="IncludeRecursive">
+        <e p="BarDg.Domain.Infra.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contexts" t="Include">
+          <e p="BarDgContext.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20200828022809_InitialCreate.cs" t="Include" />
+          <e p="20200828022809_InitialCreate.Designer.cs" t="Include" />
+          <e p="20200828024826_SeedRole.cs" t="Include" />
+          <e p="20200828024826_SeedRole.Designer.cs" t="Include" />
+          <e p="20200829033630_AddInitialTables.cs" t="Include" />
+          <e p="20200829033630_AddInitialTables.Designer.cs" t="Include" />
+          <e p="20200829033657_SeedItems.cs" t="Include" />
+          <e p="20200829033657_SeedItems.Designer.cs" t="Include" />
+          <e p="BarDgContextModelSnapshot.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="BarDg.Domain.Infra.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="OrderRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="BarDg.Domain.Tests" t="IncludeRecursive">
+        <e p="BarDg.Domain.Tests.csproj" t="IncludeRecursive" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Handlers" t="Include">
+          <e p="CreateOrderTest.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.1" t="Include">
+              <e p="BarDg.Domain.Tests.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="QueriesTests" t="Include">
+          <e p="OrderQueryTest.cs" t="Include" />
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="FakeOrderRepository.cs" t="Include" />
+        </e>
+      </e>
+      <e p="BarDG.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+    <e p="C:\Users\marcos.silva\.nuget\packages\microsoft.net.test.sdk\16.5.0\build\netcoreapp2.1" t="Include">
+      <e p="Microsoft.NET.Test.Sdk.Program.cs" t="Include" />
+    </e>
+    <e p="C:\Users\marcos.silva\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.dll" t="Include" />
+    <e p="C:\Users\marcos.silva\.nuget\packages\microsoft.testplatform.testhost\16.5.0\build\netcoreapp2.1\x64\testhost.exe" t="Include" />
+    <e p="C:\Users\marcos.silva\.nuget\packages\xunit.runner.visualstudio\2.4.0\build\netcoreapp1.0\xunit.runner.reporters.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\marcos.silva\.nuget\packages\xunit.runner.visualstudio\2.4.0\build\netcoreapp1.0\xunit.runner.utility.netcoreapp10.dll" t="Include" />
+    <e p="C:\Users\marcos.silva\.nuget\packages\xunit.runner.visualstudio\2.4.0\build\netcoreapp1.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll" t="Include" />
+    <e p="C:\Users\marcos.silva\AppData\Local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\marcos.silva\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_BarDg.-453892203.00" t="ExcludeRecursive" />
+    <e p="C:\Users\marcos.silva\AppData\Roaming\JetBrains\Rider2020.2\consoles\db" t="IncludeRecursive" />
+    <e p="C:\Users\marcos.silva\AppData\Roaming\JetBrains\Rider2020.2\extensions" t="IncludeRecursive" />
+  </component>
+</project>
