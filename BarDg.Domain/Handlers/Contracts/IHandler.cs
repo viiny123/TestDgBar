@@ -1,10 +1,11 @@
-﻿using BarDg.Domain.Commands.Contracts;
+﻿using System.Threading.Tasks;
+using BarDg.Domain.Commands.Contracts;
 
 namespace BarDg.Domain.Handlers.Contracts
 {
     public interface IHandler<TCommand> 
         where TCommand : ICommand
     {
-        ICommandResult Handle(TCommand command);
+        Task<ICommandResult> Handle(TCommand command);
     }
 }

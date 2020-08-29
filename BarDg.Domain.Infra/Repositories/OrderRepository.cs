@@ -2,7 +2,10 @@
 using System.Threading.Tasks;
 using BarDg.Domain.Entities;
 using BarDg.Domain.Infra.Contexts;
+using BarDg.Domain.Queries;
 using BarDg.Domain.Repositories;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace BarDg.Domain.Infra.Repositories
 {
@@ -14,7 +17,8 @@ namespace BarDg.Domain.Infra.Repositories
         {
             _context = context;
         }
-        public async void Create(Order order)
+
+        public async Task CreateAsync(Order order)
         {
             //_context.Entry(order).State = EntityState.Modified;
             await _context.AddAsync(order);
@@ -22,14 +26,21 @@ namespace BarDg.Domain.Infra.Repositories
 
         public async Task<List<Order>> GetAll(string code)
         {
-            // return await _context.Orders
-            //     .Where(OrderQueries.GetAll(code))
-            //     .OrderBy(x => x.Code)
-            //     .ToListAsync();
-            return null;
+            return await _context.Orders
+                .Where(OrderQueries.GetAll(code))
+                .OrderBy(x => x.Code)
+                .ToListAsync();
         }
 
-        public async void SaveChanges()
+        public async Task<bool> OrderExists(string code)
+        {
+            var order = await _context.Orders
+                .FirstOrDefaultAsync(OrderQueries.OrderExists(code));
+                
+            return order != null;
+        }
+
+        public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
         }

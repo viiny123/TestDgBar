@@ -10,5 +10,10 @@ namespace BarDg.Domain.Queries
         {
             return x => x.Code == code;
         }
+
+        public static Expression<Func<Order, bool>> OrderExists(string code)
+        {
+            return x => x.Code == code;
+        }
     }
 }

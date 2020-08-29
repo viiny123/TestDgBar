@@ -7,7 +7,12 @@ namespace BarDg.Domain.Tests.Repositories
 {
     public class FakeOrderRepository : IOrderRepository
     {
-        public void Create(Order order)
+        public void CreateAsync(Order order)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        Task IOrderRepository.CreateAsync(Order order)
         {
             throw new System.NotImplementedException();
         }
@@ -17,7 +22,17 @@ namespace BarDg.Domain.Tests.Repositories
             throw new System.NotImplementedException();
         }
 
-        public void SaveChanges()
+        public Task<bool> OrderExists(string code)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        Task IOrderRepository.SaveChangesAsync()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void SaveChangesAsync()
         {
             throw new System.NotImplementedException();
         }

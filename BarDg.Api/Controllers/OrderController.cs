@@ -4,19 +4,21 @@ using BarDg.Domain.Commands;
 using BarDg.Domain.Entities;
 using BarDg.Domain.Handlers;
 using BarDg.Domain.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BarDg.Api.Controllers
 {
     [ApiController]
+    [Authorize]
     [Route("orders")]
     public class OrderController: ControllerBase
     {
         [HttpPost]
-        public GenericCommandResult Create([FromBody] CreateOrderCommand command, 
+        public async Task<GenericCommandResult> Create([FromBody] CreateOrderCommand command, 
             [FromServices] OrderHandler handler)
         {
-            return (GenericCommandResult)handler.Handle(command);
+            return (GenericCommandResult)await handler.Handle(command);
         }
         
         [HttpGet]

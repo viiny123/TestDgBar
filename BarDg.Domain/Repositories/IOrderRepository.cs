@@ -6,8 +6,9 @@ namespace BarDg.Domain.Repositories
 {
     public interface IOrderRepository
     {
-        void Create(Order order);
+        Task CreateAsync(Order order);
         Task<List<Order>> GetAll(string code);
-        void SaveChanges();
+        Task<bool> OrderExists(string code);
+        Task SaveChangesAsync();
     }
 }

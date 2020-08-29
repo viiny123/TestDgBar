@@ -50,6 +50,7 @@ namespace BarDg.Api
             services.AddSwaggerConfiguration();
             
             services.AddTransient<IOrderRepository, OrderRepository>();
+            services.AddTransient<IItemRepository, ItemRepository>();
             services.AddTransient<OrderHandler, OrderHandler>();
             services.AddTransient<IAuthUser, AuthUser>();
 
