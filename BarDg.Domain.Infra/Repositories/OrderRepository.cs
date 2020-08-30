@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using BarDg.Domain.Entities;
 using BarDg.Domain.Infra.Contexts;
@@ -20,8 +21,12 @@ namespace BarDg.Domain.Infra.Repositories
 
         public async Task CreateAsync(Order order)
         {
-            //_context.Entry(order).State = EntityState.Modified;
             await _context.AddAsync(order);
+        }
+
+        public async Task<Order> GetById(Guid id)
+        {
+            return await _context.Orders.FirstOrDefaultAsync(OrderQueries.GetById(id));
         }
 
         public async Task<List<Order>> GetAll(string code)
@@ -38,6 +43,11 @@ namespace BarDg.Domain.Infra.Repositories
                 .FirstOrDefaultAsync(OrderQueries.OrderExists(code));
                 
             return order != null;
+        }
+
+        public async Task UpdateAsync(Order order)
+        {
+            await Task.FromResult(_context.Orders.Update(order));
         }
 
         public async Task SaveChangesAsync()

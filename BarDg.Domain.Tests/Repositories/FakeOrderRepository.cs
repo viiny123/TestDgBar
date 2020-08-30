@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using BarDg.Domain.Entities;
 using BarDg.Domain.Repositories;
@@ -22,9 +23,19 @@ namespace BarDg.Domain.Tests.Repositories
             throw new System.NotImplementedException();
         }
 
+        public Task<Order> GetById(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<bool> OrderExists(string code)
         {
             throw new System.NotImplementedException();
+        }
+
+        public Task UpdateAsync(Order order)
+        {
+            throw new NotImplementedException();
         }
 
         Task IOrderRepository.SaveChangesAsync()

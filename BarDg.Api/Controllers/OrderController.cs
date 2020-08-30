@@ -14,8 +14,15 @@ namespace BarDg.Api.Controllers
     [Route("orders")]
     public class OrderController: ControllerBase
     {
-        [HttpPost]
+        [HttpPost("create")]
         public async Task<GenericCommandResult> Create([FromBody] CreateOrderCommand command, 
+            [FromServices] OrderHandler handler)
+        {
+            return (GenericCommandResult)await handler.Handle(command);
+        }
+
+        [HttpPut("close")]
+        public async Task<GenericCommandResult> CloseOrder([FromBody] CloseOrderCommand command,
             [FromServices] OrderHandler handler)
         {
             return (GenericCommandResult)await handler.Handle(command);

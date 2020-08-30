@@ -4,14 +4,16 @@ using BarDg.Domain.Infra.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace BarDg.Domain.Infra.Migrations
 {
     [DbContext(typeof(BarDgContext))]
-    partial class BarDgContextModelSnapshot : ModelSnapshot
+    [Migration("20200830000722_AddPropertyIsClosed")]
+    partial class AddPropertyIsClosed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
