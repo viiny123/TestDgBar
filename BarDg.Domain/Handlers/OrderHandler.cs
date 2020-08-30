@@ -14,7 +14,8 @@ namespace BarDg.Domain.Handlers
     public class OrderHandler :
         Notifiable,
         IHandler<CreateOrderCommand>,
-        IHandler<CloseOrderCommand>
+        IHandler<CloseOrderCommand>,
+        IHandler<ResetOrderCommand>
     {
         private readonly IOrderRepository _orderRepository;
         private readonly IItemRepository _itemRepository;
@@ -31,9 +32,9 @@ namespace BarDg.Domain.Handlers
         {
             command.Validate();
             if (command.Invalid)
-                return new GenericCommandResult(false, "Comanda inválida", command.Notifications);
+                return new GenericCommandResult(false, "Operação inválida", command.Notifications);
 
-            var orderExists = await _orderRepository.OrderExists(command.Code);
+            var orderExists = await _orderRepository.OrderExists(command.OrderCode);
             if (orderExists)
                 return new GenericCommandResult(false, "Comanda já existe, por favor informe outro código.",
                     command.Notifications);
@@ -44,7 +45,7 @@ namespace BarDg.Domain.Handlers
 
             var order = new Order
             {
-                Code = command.Code,
+                Code = command.OrderCode,
                 Items = command.ItemOrderDtos.Select(itemOrderDto => new ItemOrder
                 {
                     Item = items.SingleOrDefault(item => item.Id == itemOrderDto.IdItem),
@@ -63,7 +64,7 @@ namespace BarDg.Domain.Handlers
         {
             command.Validate();
             if (command.Invalid)
-                return new GenericCommandResult(false, "Comanda inválida", command.Notifications);
+                return new GenericCommandResult(false, "Operação inválida", command.Notifications);
 
             var order = await _orderRepository.GetById(command.OrderId);
             if(order.IsClosed)
@@ -90,6 +91,25 @@ namespace BarDg.Domain.Handlers
             await _invoiceRepository.SaveChangesAsync();
             
             return new GenericCommandResult(true, "Comanda fechada com sucesso", invoice);
+        }
+
+        public async Task<ICommandResult> Handle(ResetOrderCommand command)
+        {
+            command.Validate();
+            if (command.Invalid)
+                return new GenericCommandResult(false, "Operação inválida", command.Notifications);
+            
+            var order = await _orderRepository.GetByCode(command.OrderCode);
+            if(order.IsClosed)
+                return new GenericCommandResult(false, "Operação inválida, Comanda já está fechada e não pode mais ser alterada.", command.Notifications);
+            
+            order.Items = new List<ItemOrder>();
+            order.TotalDiscount = 0;
+
+            await _orderRepository.UpdateAsync(order);
+            await _orderRepository.SaveChangesAsync();
+            
+            return new GenericCommandResult(true, "Comanda resetada com sucesso", order);
         }
     }
 }

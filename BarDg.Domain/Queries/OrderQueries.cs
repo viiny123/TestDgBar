@@ -20,5 +20,10 @@ namespace BarDg.Domain.Queries
         {
             return x => x.Id == id;
         }
+        
+        public static Expression<Func<Order, bool>> GetByCode(string code)
+        {
+            return x => x.Code == code;
+        }
     }
 }

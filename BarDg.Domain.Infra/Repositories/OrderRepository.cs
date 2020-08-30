@@ -31,6 +31,14 @@ namespace BarDg.Domain.Infra.Repositories
                 .ThenInclude(x => x.Item)
                 .FirstOrDefaultAsync(OrderQueries.GetById(id));
         }
+        
+        public async Task<Order> GetByCode(string code)
+        {
+            return await _context.Orders
+                .Include(x => x.Items)
+                .ThenInclude(x => x.Item)
+                .FirstOrDefaultAsync(OrderQueries.GetByCode(code));
+        }
 
         public async Task<List<Order>> GetAll(string code)
         {
