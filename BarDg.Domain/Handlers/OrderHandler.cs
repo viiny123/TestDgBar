@@ -42,6 +42,13 @@ namespace BarDg.Domain.Handlers
             var itemIds = command.ItemOrderDtos.Select(x => x.IdItem)
                 .ToArray();
             var items = await _itemRepository.GetItemsByIds(itemIds);
+            
+            var juicesIds = items.Where(x => x.Name == "Suco").Select(x => x.Id);
+            var mostThreeJuices = command.ItemOrderDtos
+                .Where(x => juicesIds.Contains(x.IdItem))
+                .Sum(x => x.Quantity) > 3;
+            if(mostThreeJuices)
+                return new GenericCommandResult(false, "Só é permitido 3 sucos por comanda.", command.Notifications);
 
             var order = new Order
             {
