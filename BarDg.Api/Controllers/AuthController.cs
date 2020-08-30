@@ -1,10 +1,7 @@
 ﻿using System.Threading.Tasks;
 using BarDg.Api.Authorizations;
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using NetDevPack.Identity.Jwt;
 
 namespace BarDg.Api.Controllers
 {

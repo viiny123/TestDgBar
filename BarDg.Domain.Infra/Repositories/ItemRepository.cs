@@ -19,9 +19,14 @@ namespace BarDg.Domain.Infra.Repositories
             _context = context;
         }
         
-        public async Task<List<Item>> GetItemsByIds(Guid[] ids)
+        public async Task<List<Item>> GetItemsByIdsAsync(Guid[] ids)
         {
-            return await _context.Items.Where(ItemQueries.GetAllByIds(ids)).ToListAsync();
+            return await _context.Items.Where(ItemQueries.GetItemsByIds(ids)).ToListAsync();
+        }
+
+        public async Task<Item> GetItemByName(string name)
+        {
+            return await _context.Items.FirstOrDefaultAsync(ItemQueries.GetItemByName(name));
         }
     }
 }

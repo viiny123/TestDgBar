@@ -54,7 +54,6 @@ namespace BarDg.Api
             services.AddTransient<IInvoiceRepository, InvoiceRepository>();
             services.AddTransient<OrderHandler, OrderHandler>();
             services.AddTransient<IAuthUser, AuthUser>();
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

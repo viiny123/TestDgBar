@@ -6,6 +6,7 @@ using BarDg.Domain.Commands;
 using BarDg.Domain.Commands.Contracts;
 using BarDg.Domain.Entities;
 using BarDg.Domain.Handlers.Contracts;
+using BarDg.Domain.Promotions;
 using BarDg.Domain.Repositories;
 using Flunt.Notifications;
 
@@ -41,21 +42,27 @@ namespace BarDg.Domain.Handlers
 
             var itemIds = command.ItemOrderDtos.Select(x => x.IdItem)
                 .ToArray();
-            var items = await _itemRepository.GetItemsByIds(itemIds);
+            var items = await _itemRepository.GetItemsByIdsAsync(itemIds);
             
-            var juicesIds = items.Where(x => x.Name == "Suco").Select(x => x.Id);
             var mostThreeJuices = command.ItemOrderDtos
-                .Where(x => juicesIds.Contains(x.IdItem))
+                .Where(x => x.NameItem == "Suco")
                 .Sum(x => x.Quantity) > 3;
             if(mostThreeJuices)
                 return new GenericCommandResult(false, "Só é permitido 3 sucos por comanda.", command.Notifications);
+            
+            var beerPromotion = new BeerPromotion();
+            var waterPromotion = new WaterPromotion(_itemRepository, items);
+            beerPromotion.SetNext(waterPromotion);
 
+            await beerPromotion.SetPromotionAsync(command);
+            
             var order = new Order
             {
                 Code = command.OrderCode,
                 Items = command.ItemOrderDtos.Select(itemOrderDto => new ItemOrder
                 {
                     Item = items.SingleOrDefault(item => item.Id == itemOrderDto.IdItem),
+                    PromotionPrice = itemOrderDto.PromotionPrice,
                     Quantity = itemOrderDto.Quantity
                 }).ToList(),
                 TotalDiscount = command.TotalDiscount

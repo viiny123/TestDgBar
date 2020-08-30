@@ -7,6 +7,7 @@ namespace BarDg.Domain.Repositories
 {
     public interface IItemRepository
     {
-        Task<List<Item>> GetItemsByIds(Guid[] ids);
+        Task<List<Item>> GetItemsByIdsAsync(Guid[] ids);
+        Task<Item> GetItemByName(string name);
     }
 }

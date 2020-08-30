@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace BarDg.Domain.Entities
+﻿namespace BarDg.Domain.Entities
 {
     public class Item : Entity
     {

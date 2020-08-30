@@ -7,9 +7,14 @@ namespace BarDg.Domain.Queries
 {
     public static class ItemQueries
     {
-        public static Expression<Func<Item, bool>> GetAllByIds(Guid[] ids)
+        public static Expression<Func<Item, bool>> GetItemsByIds(Guid[] ids)
         {
             return x => ids.Contains(x.Id);
+        }
+        
+        public static Expression<Func<Item, bool>> GetItemByName(string name)
+        {
+            return x => x.Name == name;
         }
     }
 }
