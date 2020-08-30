@@ -18,7 +18,7 @@ namespace BarDg.Domain.Commands
                 new Contract()
                     .Requires()
                     .IsNotNullOrEmpty(Code, "Code", "Por favor informe o número da comanda")
-                    .IsGreaterThan(ItemOrderDtos.Count, 1, "ItemOrderDtos", "Por favor informe pelo menos um item na comanda.")
+                    .IsGreaterThan(ItemOrderDtos.Count, 0, "ItemOrderDtos", "Por favor informe pelo menos um item na comanda.")
             );
         }
     }

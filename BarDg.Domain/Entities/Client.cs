@@ -2,7 +2,7 @@
 {
     public class Client : Entity
     {
-        public string CPF { get; set; }
+        public string Cpf { get; set; }
         public string Name { get; set; }
     }
 }

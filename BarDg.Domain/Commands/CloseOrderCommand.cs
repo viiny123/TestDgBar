@@ -8,6 +8,8 @@ namespace BarDg.Domain.Commands
     public class CloseOrderCommand : Notifiable, ICommand
     {
         public Guid OrderId { get; set; }
+        public string Cpf { get; set; }
+        public string NameClient { get; set; }
         
         public void Validate()
         {

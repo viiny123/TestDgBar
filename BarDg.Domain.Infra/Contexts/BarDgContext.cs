@@ -26,24 +26,12 @@ namespace BarDg.Domain.Infra.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            
-            modelBuilder.Entity<InvoiceItems>()
-                .HasKey(x => new {x.ItemId, x.InvoiceId});
-
-            modelBuilder.Entity<InvoiceItems>()
-                .HasOne(x => x.Invoice)
-                .WithMany(x => x.InvoiceItems)
-                .HasForeignKey(x => x.InvoiceId);
-            
-            modelBuilder.Entity<InvoiceItems>()
-                .HasOne(x => x.Item)
-                .WithMany(x => x.InvoiceItems)
-                .HasForeignKey(x => x.ItemId);
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(_connString,
+            optionsBuilder
+                .UseSqlServer(_connString,
                 sqlOptions => sqlOptions.EnableRetryOnFailure(3));
         }
     }

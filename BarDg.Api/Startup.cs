@@ -51,6 +51,7 @@ namespace BarDg.Api
             
             services.AddTransient<IOrderRepository, OrderRepository>();
             services.AddTransient<IItemRepository, ItemRepository>();
+            services.AddTransient<IInvoiceRepository, InvoiceRepository>();
             services.AddTransient<OrderHandler, OrderHandler>();
             services.AddTransient<IAuthUser, AuthUser>();
 
