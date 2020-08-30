@@ -16,7 +16,9 @@ namespace BarDg.Domain.Commands
             AddNotifications(
                 new Contract()
                     .Requires()
-                    .IsNotNull(OrderId, "OrderId", "Por favor informe a comanda")
+                    .IsNotNull(OrderId, "OrderId", "Por favor informe a comanda.")
+                    .IsNotNull(Cpf, "Cpf", "Por favor informe o cpf do cliente.")
+                    .IsNotNull(NameClient, "NameClient", "Por favor informe o nome do cliente.")
             );
         }
     }

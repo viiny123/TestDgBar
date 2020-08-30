@@ -66,6 +66,8 @@ namespace BarDg.Domain.Handlers
                 return new GenericCommandResult(false, "Comanda inválida", command.Notifications);
 
             var order = await _orderRepository.GetById(command.OrderId);
+            if(order.IsClosed)
+                return new GenericCommandResult(false, "Comanda já está fechada.", command.Notifications);
             order.IsClosed = true;
 
             await _orderRepository.UpdateAsync(order);
