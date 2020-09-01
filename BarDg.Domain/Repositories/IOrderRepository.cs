@@ -8,7 +8,6 @@ namespace BarDg.Domain.Repositories
     public interface IOrderRepository
     {
         Task CreateAsync(Order order);
-        Task<List<Order>> GetAll(string code);
         Task<Order> GetById(Guid id);
         Task<Order> GetByCode(string code);
         Task<bool> OrderExists(string code);

@@ -22,13 +22,13 @@ namespace BarDg.Api.Authorizations
 
         public async Task<UserResponse<string>> LoginAsync(LoginRequest loginUser)
         {
-            var result = await _signInManager.PasswordSignInAsync(loginUser.UserName, loginUser.Password, true, false);
+            var result = await _signInManager.PasswordSignInAsync(loginUser.Username, loginUser.Password, true, false);
             if (result.Succeeded)
             {
                 return new JwtBuilder()
                     .WithUserManager(_userManager)
                     .WithJwtSettings(_appJwtSettings)
-                    .WithEmail(loginUser.UserName)
+                    .WithEmail(loginUser.Username)
                     .WithJwtClaims()
                     .WithUserClaims()
                     .WithUserRoles()

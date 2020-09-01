@@ -1,0 +1,46 @@
+.layout {
+  display: grid;
+  grid-template-columns: 0 1fr;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas:
+    "logo blank"
+    "logo login"
+    "logo language";
+
+  min-height: 100vh;
+  > .login {
+    padding: 2rem;
+  }
+}
+
+.login,
+.language-selector {
+  display: grid;
+}
+
+.header {
+  font-weight: 700;
+}
+
+.login {
+  grid-area: login;
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.language-selector {
+  justify-content: center;
+  align-self: center;
+  grid-area: language;
+}
+
+@media only screen and (min-width: 700px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    > .login {
+      padding: 0 20%;
+    }
+  }
+}

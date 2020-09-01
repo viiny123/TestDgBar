@@ -1,0 +1,30 @@
+<form nz-form [formGroup]="loginForm" class="layout" (ngSubmit)="enter()" nz-typography>
+
+    <label for="username">{{'login.username' | translate}}</label>
+    <nz-form-item>
+        <nz-form-control [nzErrorTip]="'login.username-not-informed' | translate">
+            <nz-input-group nzSize="large">
+                <input id="username" type="text" nz-input [placeholder]="'login.insert-username' | translate"
+                    formControlName="username" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+
+    <label for="password">{{'login.password' | translate}}</label>
+    <nz-form-item>
+        <nz-form-control [nzErrorTip]="'login.password-not-informed' | translate">
+            <nz-input-group nzSize="large">
+                <input id="password" type="password" nz-input [placeholder]="'login.insert-password' | translate"
+                    formControlName="password" />
+            </nz-input-group>
+        </nz-form-control>
+    </nz-form-item>
+
+    <button nz-button nzType="primary" [nzSize]="'large'" type="submit" class="btn-enter">
+        {{'login.enter' | translate}}
+    </button>
+
+    <a nz-button nzType="link">
+        {{'login.forgot-password' | translate}}
+    </a>
+</form>

@@ -1,0 +1,24 @@
+{
+  "schema": "http://localhost:5000/graphql",
+  "generates": {
+    "./projects/bardg/src/app/modules/graphql/models/types.model.ts": {
+      "plugins": [
+        "typescript"
+      ],
+      "config": {
+        "declarationKind": {
+          "type": "interface",
+          "input": "class",
+          "arguments": "class",
+          "interface": "interface"
+        },
+        "skipTypename": true,
+        "scalars": {
+          "Uuid": "string",
+          "DateTime": "Date",
+          "Date": "Date"
+        }
+      }
+    }
+  }
+}

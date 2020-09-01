@@ -40,14 +40,6 @@ namespace BarDg.Domain.Infra.Repositories
                 .FirstOrDefaultAsync(OrderQueries.GetByCode(code));
         }
 
-        public async Task<List<Order>> GetAll(string code)
-        {
-            return await _context.Orders
-                .Where(OrderQueries.GetAll(code))
-                .OrderBy(x => x.Code)
-                .ToListAsync();
-        }
-
         public async Task<bool> OrderExists(string code)
         {
             var order = await _context.Orders

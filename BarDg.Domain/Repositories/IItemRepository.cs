@@ -9,5 +9,6 @@ namespace BarDg.Domain.Repositories
     {
         Task<List<Item>> GetItemsByIdsAsync(Guid[] ids);
         Task<Item> GetItemByName(string name);
+        Task<List<Item>> GetAll();
     }
 }

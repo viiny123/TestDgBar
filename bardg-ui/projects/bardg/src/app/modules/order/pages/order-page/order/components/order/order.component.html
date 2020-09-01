@@ -1,0 +1,17 @@
+<form nz-form class="layout">
+  <nz-form-item>
+    <nz-form-control>
+      <input nz-input placeholder="Comanda" type="text" [(ngModel)]="command.orderCode" name="orderCode">
+    </nz-form-control>
+  </nz-form-item>
+  <nz-form-item>
+    <button nz-button nzType="primary" (click)="addComponent(itemComponenteClass)">Add novo item</button>
+  </nz-form-item>
+  <nz-form-item>
+    <ng-template #container>
+    </ng-template>
+  </nz-form-item>
+  <nz-form-item>
+    <button nz-button nzType="primary" (click)="salvar()">Criar comanda</button>
+  </nz-form-item>
+</form>

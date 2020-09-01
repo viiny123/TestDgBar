@@ -6,11 +6,6 @@ namespace BarDg.Domain.Queries
 {
     public static class OrderQueries
     {
-        public static Expression<Func<Order, bool>> GetAll(string code)
-        {
-            return x => x.Code == code;
-        }
-
         public static Expression<Func<Order, bool>> OrderExists(string code)
         {
             return x => x.Code == code;

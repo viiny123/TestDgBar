@@ -28,5 +28,10 @@ namespace BarDg.Domain.Infra.Repositories
         {
             return await _context.Items.FirstOrDefaultAsync(ItemQueries.GetItemByName(name));
         }
+
+        public async Task<List<Item>> GetAll()
+        {
+            return await _context.Items.ToListAsync();
+        }
     }
 }

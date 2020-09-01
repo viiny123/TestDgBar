@@ -1,0 +1,15 @@
+<div class="item-layout">
+  <div>
+    <input placeholder="Selecione um item" nz-input [nzAutocomplete]="auto" *ngIf="options$ | async" />
+    <nz-autocomplete nzBackfill #auto>
+      <nz-auto-option *ngFor="let option of options$ | async" [nzValue]="option" [nzLabel]="option.name"
+        (selectionChange)="selected($event)">
+        {{ option.name }}
+      </nz-auto-option>
+    </nz-autocomplete>
+  </div>
+  <nz-input-number [nzMin]="1" [nzMax]="10" [nzStep]="1" [nzPlaceHolder]="'Qtd'" [(ngModel)]="itemDto.quantity"
+    name="quantity">
+  </nz-input-number>
+  <button nz-button nzType="primary" (click)="addNewItem()">Add item a comanda</button>
+</div>

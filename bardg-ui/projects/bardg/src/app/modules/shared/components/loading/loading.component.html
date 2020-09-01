@@ -1,0 +1,7 @@
+<div class="layout" *ngIf="isLoading; else content">
+  <pj-loading-spinner [size]="size"></pj-loading-spinner>
+</div>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

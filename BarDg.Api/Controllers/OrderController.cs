@@ -35,11 +35,11 @@ namespace BarDg.Api.Controllers
             return (GenericCommandResult)await handler.Handle(command);
         }
         
-        [HttpGet]
-        public async Task<List<Order>> GetAll(string code, 
-            [FromServices] IOrderRepository repository)
-        {
-            return await repository.GetAll(code);
-        }
+        // [HttpGet]
+        // public async Task<List<Order>> GetAll(string code, 
+        //     [FromServices] IOrderRepository repository)
+        // {
+        //     return await repository.GetAll(code);
+        // }
     }
 }

@@ -1,0 +1,13 @@
+<div class="layout default-background">
+    <div class="logo muted-background">
+        <pj-login-logo></pj-login-logo>
+    </div>
+
+    <div class="login">
+        <pj-loading [isLoading]="isLoading">
+            <h1 class="header">{{ "login.login" | translate }}</h1>
+            <pj-login-form (login)="login($event)"></pj-login-form>
+        </pj-loading>
+    </div>
+
+</div>
