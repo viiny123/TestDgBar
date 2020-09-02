@@ -1,1 +1,16 @@
-<pj-order></pj-order>
+<ng-container *ngIf="showOrder; then order">
+</ng-container>
+<ng-container *ngIf="showCloseOrder; then close">
+</ng-container>
+<ng-container *ngIf="showInvoice; then invoice">
+</ng-container>
+<ng-template #order>
+  <pj-order (showCloseOrder)="seeCloseOrder($event)" (orderOutput)="setOrder($event)"></pj-order>
+</ng-template>
+<ng-template #close>
+  <pj-close-order [order]="orderClose" (showInvoice)="seeInvoice($event)" (invoiceOutput)="setInvoice($event)">
+  </pj-close-order>
+</ng-template>
+<ng-template #invoice>
+  <pj-invoice-order [invoice]="orderInvoice"></pj-invoice-order>
+</ng-template>

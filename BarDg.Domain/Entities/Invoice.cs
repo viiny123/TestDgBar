@@ -11,6 +11,6 @@ namespace BarDg.Domain.Entities
         public decimal TotalDiscount { get; set; }
         public decimal TotalCost => Items?.Sum(x => x.PromotionPrice != x.Item?.UnitPrice 
             ? x.PromotionPrice * x.Quantity 
-            : x.Item?.UnitPrice * x.Quantity) - TotalDiscount ?? 0;
+            : x.Item?.UnitPrice * x.Quantity) ?? 0;
     }
 }

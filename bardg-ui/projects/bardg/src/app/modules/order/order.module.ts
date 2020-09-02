@@ -14,9 +14,19 @@ import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
 import { ItemComponent } from './pages/order-page/order/components/item/item.component';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzMessageModule } from 'ng-zorro-antd/message';
+import { CloseOrderComponent } from './pages/order-page/order/components/close-order/close-order.component';
+import { NzListModule } from 'ng-zorro-antd/list';
+import { InvoiceOrderComponent } from './pages/order-page/order/components/invoice-order/invoice-order.component';
+import { NzTypographyModule } from 'ng-zorro-antd/typography';
 
 @NgModule({
-  declarations: [OrderPage, OrderComponent, ItemComponent],
+  declarations: [
+    OrderPage,
+    OrderComponent,
+    ItemComponent,
+    CloseOrderComponent,
+    InvoiceOrderComponent,
+  ],
   imports: [
     CommonModule,
     SharedModule,
@@ -29,6 +39,8 @@ import { NzMessageModule } from 'ng-zorro-antd/message';
     NzInputNumberModule,
     NzButtonModule,
     NzMessageModule,
+    NzListModule,
+    NzTypographyModule,
   ],
   providers: [OrderService],
 })

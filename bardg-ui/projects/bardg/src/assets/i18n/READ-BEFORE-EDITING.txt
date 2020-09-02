@@ -1,4 +1,0 @@
-As traduções são extraidas automaticamente com o comando 'npm run i18n:extract'.
-Para preencher as traduções recomendo usar o i18n-manager.
-Github do i18n-manager: https://github.com/gilmarsquinelato/i18n-manager
-

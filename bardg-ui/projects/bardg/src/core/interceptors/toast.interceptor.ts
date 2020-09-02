@@ -8,12 +8,11 @@ import {
 } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
-import { GraphQlRawResponse } from '../models/request/graphql-raw-response.model';
 import { Injectable } from '@angular/core';
 import { NzNotificationService } from 'ng-zorro-antd/notification';
-import { ResponseError } from '../models/request/response-error.model';
 import { TranslateService } from '@ngx-translate/core';
 import { marker as _ } from '@biesbjerg/ngx-translate-extract-marker';
+import { ResponseError } from '@core/models/request/response-error.model';
 
 _('toast.error');
 
@@ -38,22 +37,10 @@ export class ToastInterceptor implements HttpInterceptor {
 
     return next.handle(req).pipe(
       map((event: HttpEvent<any>) => {
-        if (event instanceof HttpResponse) this.checkGraphQlError(event);
         return event;
       }),
       catchError((err) => this.handleOnError(err))
     );
-  }
-
-  private checkGraphQlError(response: HttpResponse<GraphQlRawResponse<any>>) {
-    if (response.body.errors && response.body.errors.length > 0) {
-      this.translate.get('toast.error').subscribe((res: string) => {
-        response.body.errors.forEach((errorDetail) =>
-          this.notification.create('error', res, errorDetail.message)
-        );
-      });
-      console.error(response.body.errors);
-    }
   }
 
   private handleOnError(err: HttpErrorResponse) {

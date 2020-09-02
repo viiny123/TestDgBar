@@ -1,0 +1,43 @@
+<form nz-form class="layout-invoice">
+  <nz-form-item>
+    <h1 nz-typography>Nota Fiscal</h1>
+  </nz-form-item>
+  <nz-form-item>
+    <div class="layout-client">
+      <nz-form-control>
+        <input nz-input [disabled]="true" type="text" [(ngModel)]="invoice.client.name" name="nameclient">
+      </nz-form-control>
+      <nz-form-control>
+        <input nz-input [disabled]="true" type="text" [(ngModel)]="invoice.client.cpf" name="cpf">
+      </nz-form-control>
+    </div>
+  </nz-form-item>
+  <nz-form-item>
+    <nz-list nzItemLayout="horizontal" [nzLoading]="false">
+      <nz-list-item *ngFor="let item of invoice.items">
+        <nz-list-item-meta [nzDescription]="item.item.name">
+          <nz-list-item-meta-title>
+            <div class="layout-values">
+              <div>
+                Preço unitátio: {{ item.item.unitPrice | currency:'BRL':'symbol':'1.2-2':'pt'}}
+              </div>
+              <div>
+                Quantidade: {{ item.quantity }}
+              </div>
+            </div>
+          </nz-list-item-meta-title>
+        </nz-list-item-meta>
+      </nz-list-item>
+    </nz-list>
+  </nz-form-item>
+  <nz-form-item>
+    <div class="layout-values">
+      <div>
+        Total desconto: {{invoice.totalDiscount | currency:'BRL':'symbol':'1.2-2':'pt'}}
+      </div>
+      <div>
+        Preço total: {{invoice.totalCost | currency:'BRL':'symbol':'1.2-2':'pt'}}
+      </div>
+    </div>
+  </nz-form-item>
+</form>

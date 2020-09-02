@@ -5,7 +5,6 @@ import {
   LogoutOutline,
 } from '@ant-design/icons-angular/icons';
 
-import { BreadcrumbComponent } from './components/breadcrumb/breadcrumb.component';
 import { BreadcrumbModule } from 'angular-crumbs';
 import { CommonModule } from '@angular/common';
 import { IconDefinition } from '@ant-design/icons-angular';
@@ -34,7 +33,6 @@ const icons: IconDefinition[] = [
   declarations: [
     LoadingComponent,
     LoadingSpinnerComponent,
-    BreadcrumbComponent,
     NavbarComponent,
     NavbarUserComponent,
   ],
@@ -57,7 +55,6 @@ const icons: IconDefinition[] = [
     RouterModule,
     LoadingComponent,
     LoadingSpinnerComponent,
-    BreadcrumbComponent,
     NavbarComponent,
     NavbarUserComponent,
   ],

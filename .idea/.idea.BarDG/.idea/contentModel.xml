@@ -18,6 +18,7 @@
         </e>
         <e p="Controllers" t="Include">
           <e p="AuthController.cs" t="Include" />
+          <e p="ItemController.cs" t="Include" />
           <e p="OrderController.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -37,18 +38,22 @@
         <e p="BarDg.Domain.csproj" t="IncludeRecursive" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Commands" t="Include">
+          <e p="CloseOrderCommand.cs" t="Include" />
           <e p="Contracts" t="Include">
             <e p="ICommand.cs" t="Include" />
             <e p="ICommandResult.cs" t="Include" />
           </e>
           <e p="CreateOrderCommand.cs" t="Include" />
           <e p="GenericCommandResult.cs" t="Include" />
+          <e p="ResetOrderCommand.cs" t="Include" />
+        </e>
+        <e p="Dtos" t="Include">
+          <e p="ItemOrderDto.cs" t="Include" />
         </e>
         <e p="Entities" t="Include">
           <e p="Client.cs" t="Include" />
           <e p="Entity.cs" t="Include" />
           <e p="Invoice.cs" t="Include" />
-          <e p="InvoiceItems.cs" t="Include" />
           <e p="Item.cs" t="Include" />
           <e p="ItemOrder.cs" t="Include" />
           <e p="Order.cs" t="Include" />
@@ -66,10 +71,18 @@
             </e>
           </e>
         </e>
+        <e p="Promotions" t="Include">
+          <e p="BeerPromotion.cs" t="Include" />
+          <e p="Promotion.cs" t="Include" />
+          <e p="WaterPromotion.cs" t="Include" />
+        </e>
         <e p="Queries" t="Include">
+          <e p="ItemQueries.cs" t="Include" />
           <e p="OrderQueries.cs" t="Include" />
         </e>
         <e p="Repositories" t="Include">
+          <e p="IInvoiceRepository.cs" t="Include" />
+          <e p="IItemRepository.cs" t="Include" />
           <e p="IOrderRepository.cs" t="Include" />
         </e>
       </e>
@@ -88,6 +101,16 @@
           <e p="20200829033630_AddInitialTables.Designer.cs" t="Include" />
           <e p="20200829033657_SeedItems.cs" t="Include" />
           <e p="20200829033657_SeedItems.Designer.cs" t="Include" />
+          <e p="20200830000722_AddPropertyIsClosed.cs" t="Include" />
+          <e p="20200830000722_AddPropertyIsClosed.Designer.cs" t="Include" />
+          <e p="20200830020902_AdjustModelingBase.cs" t="Include" />
+          <e p="20200830020902_AdjustModelingBase.Designer.cs" t="Include" />
+          <e p="20200830021457_AdjustNameTable.cs" t="Include" />
+          <e p="20200830021457_AdjustNameTable.Designer.cs" t="Include" />
+          <e p="20200830033403_AddPropPromotionPrice.cs" t="Include" />
+          <e p="20200830033403_AddPropPromotionPrice.Designer.cs" t="Include" />
+          <e p="20200901212226_AjusteDesconto.cs" t="Include" />
+          <e p="20200901212226_AjusteDesconto.Designer.cs" t="Include" />
           <e p="BarDgContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -98,6 +121,8 @@
           </e>
         </e>
         <e p="Repositories" t="Include">
+          <e p="InvoiceRepository.cs" t="Include" />
+          <e p="ItemRepository.cs" t="Include" />
           <e p="OrderRepository.cs" t="Include" />
         </e>
       </e>
@@ -117,9 +142,7 @@
         <e p="QueriesTests" t="Include">
           <e p="OrderQueryTest.cs" t="Include" />
         </e>
-        <e p="Repositories" t="Include">
-          <e p="FakeOrderRepository.cs" t="Include" />
-        </e>
+        <e p="Repositories" t="Include" />
       </e>
       <e p="BarDG.sln" t="IncludeFlat" />
       <e p="packages" t="ExcludeRecursive" />

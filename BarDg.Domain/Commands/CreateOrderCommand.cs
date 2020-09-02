@@ -10,8 +10,7 @@ namespace BarDg.Domain.Commands
     {
         public string OrderCode { get; set; }
         public List<ItemOrderDto> ItemOrderDtos { get; set; }
-        public decimal TotalDiscount { get; set; }
-        
+
         public void Validate()
         {
             AddNotifications(

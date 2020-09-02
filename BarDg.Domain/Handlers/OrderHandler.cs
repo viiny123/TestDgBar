@@ -65,7 +65,6 @@ namespace BarDg.Domain.Handlers
                     PromotionPrice = itemOrderDto.PromotionPrice,
                     Quantity = itemOrderDto.Quantity
                 }).ToList(),
-                TotalDiscount = command.TotalDiscount
             };
 
             await _orderRepository.CreateAsync(order);
@@ -118,7 +117,6 @@ namespace BarDg.Domain.Handlers
                 return new GenericCommandResult(false, "Operação inválida, Comanda já está fechada e não pode mais ser alterada.", command.Notifications);
             
             order.Items = new List<ItemOrder>();
-            order.TotalDiscount = 0;
 
             await _orderRepository.UpdateAsync(order);
             await _orderRepository.SaveChangesAsync();

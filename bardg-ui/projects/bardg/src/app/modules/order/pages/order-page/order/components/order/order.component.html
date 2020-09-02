@@ -12,6 +12,9 @@
     </ng-template>
   </nz-form-item>
   <nz-form-item>
-    <button nz-button nzType="primary" (click)="salvar()">Criar comanda</button>
+    <div class="buttons">
+      <button nz-button nzType="primary" (click)="salvar()">Criar comanda</button>
+      <button nz-button nzType="default" (click)="resetOrder()">Resetar comanda</button>
+    </div>
   </nz-form-item>
 </form>

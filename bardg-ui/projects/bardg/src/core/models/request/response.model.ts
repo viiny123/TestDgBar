@@ -1,6 +1,5 @@
-import { ResponseError } from './response-error.model';
-
-export class Response<T> {
-    data: T;
-    errors: ResponseError[];
+export class CommandResult<T> {
+  success: boolean;
+  data: T;
+  message: string;
 }
