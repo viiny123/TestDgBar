@@ -24,41 +24,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="de8e9a20-1fbb-48e7-aa25-7319046b0576" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/BarDg.Domain.Infra/Migrations/20200901212226_AjusteDesconto.Designer.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BarDg.Domain.Infra/Migrations/20200901212226_AjusteDesconto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/close-order/close-order.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/close-order/close-order.component.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/close-order/close-order.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/invoice-order/invoice-order.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/invoice-order/invoice-order.component.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/invoice-order/invoice-order.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/models/client.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/models/closeOrderCommand.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/models/invoice.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/models/item.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/models/itemOrder.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/models/order.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BarDg.Domain.Tests/Promotions/BeerPromotionTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BarDG/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarDG/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BarDG/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BarDG/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarDg.Api/Controllers/OrderController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarDg.Api/Controllers/OrderController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarDg.Domain.Infra/Migrations/BarDgContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarDg.Domain.Infra/Migrations/BarDgContextModelSnapshot.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarDg.Domain/Commands/CreateOrderCommand.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarDg.Domain/Commands/CreateOrderCommand.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarDg.Domain/Entities/Invoice.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarDg.Domain/Entities/Invoice.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BarDg.Domain/Entities/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarDg.Domain/Entities/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarDg.Domain.Tests/BarDg.Domain.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/BarDg.Domain.Tests/BarDg.Domain.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarDg.Domain.Tests/Handlers/CreateOrderTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BarDg.Domain.Tests/QueriesTests/OrderQueryTest.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarDg.Domain.Tests/QueriesTests/OrderQueryTest.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BarDg.Domain/Handlers/OrderHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BarDg.Domain/Handlers/OrderHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/order.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/order.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/order/order.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/order/order.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/order/order.component.less" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/order/order.component.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/order/order.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/components/order/order.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/order.page.html" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/order.page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/order.page.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/order.page.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/services/order.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/app/modules/order/pages/order-page/order/services/order.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/assets/i18n/READ-BEFORE-EDITING.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/assets/i18n/pt-br.json" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/assets/i18n/pt-br.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/core/interceptors/toast.interceptor.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/core/interceptors/toast.interceptor.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/core/models/request/graphql-raw-response.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/core/models/request/paginated-response.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/core/models/request/response.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/bardg-ui/projects/bardg/src/core/models/request/response.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +42,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/15F54751-0FF6-44A8-B0D0-D9D31E369A32/f2/4312c353/UserToken`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/3AF2DDC3-E1B5-4638-9A6C-069C97811067/ee/f2597e8b/AssertionExtensions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/4065B38D-0F9F-44D9-8F53-F4C9102AF396/3DC/List.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6DADD22E-0197-42CE-80AA-EFEF99855BE0/c6/a9d594eb/Func`2.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/15F54751-0FF6-44A8-B0D0-D9D31E369A32/f3/7e0dee8d/NetDevPackAppDbContext.cs" root0="SKIP_HIGHLIGHTING" />
@@ -90,7 +63,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/BarDg.Api/Program.cs" />
         <option value="$PROJECT_DIR$/BarDg.Api/BarDg.Api.csproj" />
         <option value="$PROJECT_DIR$/BarDg.Domain.Infra/Migrations/20200828024826_SeedRole.cs" />
         <option value="$PROJECT_DIR$/BarDg.Api/Configurations/SwaggerConfig.cs" />
@@ -130,17 +102,18 @@
         <option value="$PROJECT_DIR$/BarDg.Domain/Queries/OrderQueries.cs" />
         <option value="$PROJECT_DIR$/BarDg.Domain.Infra/Repositories/OrderRepository.cs" />
         <option value="$PROJECT_DIR$/BarDg.Domain.Infra/Repositories/OrderRepository.cs" />
-        <option value="$PROJECT_DIR$/BarDg.Domain.Tests/QueriesTests/OrderQueryTest.cs" />
         <option value="$PROJECT_DIR$/BarDg.Domain.Infra/Repositories/ItemRepository.cs" />
         <option value="$PROJECT_DIR$/BarDg.Domain/Repositories/IItemRepository.cs" />
         <option value="$PROJECT_DIR$/BarDg.Api/Controllers/ItemController.cs" />
         <option value="$PROJECT_DIR$/BarDg.Domain/Commands/CreateOrderCommand.cs" />
-        <option value="$PROJECT_DIR$/BarDg.Domain/Handlers/OrderHandler.cs" />
-        <option value="$PROJECT_DIR$/BarDg.Domain/Handlers/OrderHandler.cs" />
         <option value="$PROJECT_DIR$/BarDg.Domain/Entities/Order.cs" />
         <option value="$PROJECT_DIR$/BarDg.Domain/Entities/Order.cs" />
         <option value="$PROJECT_DIR$/BarDg.Api/Controllers/OrderController.cs" />
         <option value="$PROJECT_DIR$/BarDg.Domain/Entities/Invoice.cs" />
+        <option value="$PROJECT_DIR$/BarDg.Domain.Tests/QueriesTests/OrderQueryTest.cs" />
+        <option value="$PROJECT_DIR$/BarDg.Domain/Handlers/OrderHandler.cs" />
+        <option value="$PROJECT_DIR$/BarDg.Domain/Handlers/OrderHandler.cs" />
+        <option value="$PROJECT_DIR$/BarDg.Domain.Tests/Promotions/BeerPromotionTest.cs" />
       </list>
     </option>
   </component>
@@ -244,7 +217,7 @@
       <workItem from="1598805025005" duration="1262000" />
       <workItem from="1598914385831" duration="4229000" />
       <workItem from="1598972509237" duration="13054000" />
-      <workItem from="1599055913468" duration="9686000" />
+      <workItem from="1599055913468" duration="12038000" />
     </task>
     <servers />
   </component>
@@ -274,90 +247,90 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="872" y="178" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1598666889144" />
-    <state width="509" height="464" key="DebuggerActiveHint" timestamp="1599075772137">
+    <state width="509" height="464" key="DebuggerActiveHint" timestamp="1599080646929">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="509" height="464" key="DebuggerActiveHint/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075772137" />
-    <state width="2517" height="339" key="GridCell.Tab.0.bottom" timestamp="1599075868060">
+    <state width="509" height="464" key="DebuggerActiveHint/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080646929" />
+    <state width="2517" height="339" key="GridCell.Tab.0.bottom" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.0.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868060" />
-    <state width="2517" height="339" key="GridCell.Tab.0.center" timestamp="1599075868060">
+    <state width="2517" height="339" key="GridCell.Tab.0.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.0.center" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.0.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868060" />
-    <state width="2517" height="339" key="GridCell.Tab.0.left" timestamp="1599075868060">
+    <state width="2517" height="339" key="GridCell.Tab.0.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.0.left" timestamp="1599080997254">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.0.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868060" />
-    <state width="2517" height="339" key="GridCell.Tab.0.right" timestamp="1599075868060">
+    <state width="2517" height="339" key="GridCell.Tab.0.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997254" />
+    <state width="2517" height="339" key="GridCell.Tab.0.right" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.0.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868060" />
-    <state width="2517" height="339" key="GridCell.Tab.1.bottom" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.0.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.1.bottom" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.1.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.1.center" timestamp="1599075868060">
+    <state width="2517" height="339" key="GridCell.Tab.1.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.1.center" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.1.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868060" />
-    <state width="2517" height="339" key="GridCell.Tab.1.left" timestamp="1599075868060">
+    <state width="2517" height="339" key="GridCell.Tab.1.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.1.left" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.1.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868060" />
-    <state width="2517" height="339" key="GridCell.Tab.1.right" timestamp="1599075868060">
+    <state width="2517" height="339" key="GridCell.Tab.1.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.1.right" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.1.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868060" />
-    <state width="2517" height="339" key="GridCell.Tab.2.bottom" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.1.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.2.bottom" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.2.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.2.center" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.2.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.2.center" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.2.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.2.left" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.2.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.2.left" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.2.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.2.right" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.2.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.2.right" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.2.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.3.bottom" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.2.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.3.bottom" timestamp="1599080997256">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.3.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.3.center" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.3.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997256" />
+    <state width="2517" height="339" key="GridCell.Tab.3.center" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.3.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.3.left" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.3.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.3.left" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.3.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.3.right" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.3.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.3.right" timestamp="1599080997255">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.3.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.4.bottom" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.3.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997255" />
+    <state width="2517" height="339" key="GridCell.Tab.4.bottom" timestamp="1599080997256">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.4.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.4.center" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.4.bottom/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997256" />
+    <state width="2517" height="339" key="GridCell.Tab.4.center" timestamp="1599080997256">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.4.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.4.left" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.4.center/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997256" />
+    <state width="2517" height="339" key="GridCell.Tab.4.left" timestamp="1599080997256">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.4.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
-    <state width="2517" height="339" key="GridCell.Tab.4.right" timestamp="1599075868061">
+    <state width="2517" height="339" key="GridCell.Tab.4.left/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997256" />
+    <state width="2517" height="339" key="GridCell.Tab.4.right" timestamp="1599080997256">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
-    <state width="2517" height="339" key="GridCell.Tab.4.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599075868061" />
+    <state width="2517" height="339" key="GridCell.Tab.4.right/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1599080997256" />
     <state x="872" y="252" key="Rider.ProjectTemplateDialog.Size" timestamp="1598743924987">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
@@ -382,5 +355,37 @@
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="943" y="225" key="search.everywhere.popup/-3840.0.1280.693/-1920.0.1920.1040/0.0.2560.1040@0.0.2560.1040" timestamp="1598982572540" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BarDg.Domain.Tests/Promotions/BeerPromotionTest.cs</url>
+          <line>15</line>
+          <properties documentPath="C:\Personal\TestDgBar\BarDg.Domain.Tests\Promotions\BeerPromotionTest.cs" initialLine="16">
+            <startOffsets>
+              <option value="359" />
+            </startOffsets>
+            <endOffsets>
+              <option value="398" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/BarDg.Domain/Handlers/OrderHandler.cs</url>
+          <line>110</line>
+          <properties documentPath="C:\Personal\TestDgBar\BarDg.Domain\Handlers\OrderHandler.cs" initialLine="110">
+            <startOffsets>
+              <option value="4289" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4308" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using BarDg.Domain.Entities;
 using BarDg.Domain.Queries;
@@ -25,8 +26,8 @@ namespace BarDg.Domain.Tests.QueriesTests
         [Fact]
         public void Deve_retornar_somente_uma_comanda()
         {
-            // var result = _orders.AsQueryable().Where(OrderQueries.GetAll("123456"));
-            // result.Should().HaveCount(1);
+            var result = _orders.AsQueryable().Where(OrderQueries.OrderExists("123456"));
+            result.Should().HaveCount(1);
         }
     }
 }

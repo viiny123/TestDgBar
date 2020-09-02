@@ -113,6 +113,8 @@ namespace BarDg.Domain.Handlers
                 return new GenericCommandResult(false, "Operação inválida", command.Notifications);
             
             var order = await _orderRepository.GetByCode(command.OrderCode);
+            if(order == null)
+                return new GenericCommandResult(false, "Operação inválida, Comanda não existe", command.Notifications);
             if(order.IsClosed)
                 return new GenericCommandResult(false, "Operação inválida, Comanda já está fechada e não pode mais ser alterada.", command.Notifications);
             
